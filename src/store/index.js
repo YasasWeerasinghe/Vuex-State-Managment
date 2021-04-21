@@ -3,12 +3,12 @@ import { createStore } from 'vuex';
 const store = createStore({
   state() {
     return {
-        user: null,
-    //   user: {
-    //     firstName: 'Saman',
-    //     lastName: 'Perera',
-    //     email: 'saman@gmail.com',
-    //   },
+      user: null,
+      //   user: {
+      //     firstName: 'Saman',
+      //     lastName: 'Perera',
+      //     email: 'saman@gmail.com',
+      //   },
       products: [{
         id: '24ab7b14-f935-44c1-b91b-8598123ea54a',
         title: 'Headlight Helmet',
