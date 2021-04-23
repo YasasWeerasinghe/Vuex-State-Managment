@@ -1,4 +1,5 @@
 import { createStore } from 'vuex';
+import filterProducts from '../products/filter-products';
 
 const store = createStore({
   state() {
@@ -9,6 +10,7 @@ const store = createStore({
       //     lastName: 'Perera',
       //     email: 'saman@gmail.com',
       //   },
+      productFilter: null,
       products: [{
         id: '24ab7b14-f935-44c1-b91b-8598123ea54a',
         title: 'Headlight Helmet',
@@ -46,6 +48,20 @@ const store = createStore({
         image: 'mega-pokey-kit.jpg',
       }],
     };
+  },
+  getters: {
+    filteredProducts(state) {
+      return filterProducts(state.productFilter, state.products);
+    },
+  },
+
+  mutations: {
+    setUser(state, user) {
+      state.user = user;
+    },
+    setProductFilter(state, filter) {
+      state.productFilter = filter;
+    },
   },
 });
 
